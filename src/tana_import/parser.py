@@ -20,10 +20,12 @@ def parse_export_file(file_path: Path) -> List[ChatGPTConversation]:
         FileNotFoundError: If the file does not exist.
         json.JSONDecodeError: If the file is not valid JSON.
     """
+    # Validate JSON format by attempting to load
+    # TODO: Implement actual parsing logic
     with open(file_path, "r", encoding="utf-8") as f:
         _ = json.load(f)
 
-    # Placeholder implementation
+    # Placeholder implementation - will be replaced with actual parsing
     return []
 
 
