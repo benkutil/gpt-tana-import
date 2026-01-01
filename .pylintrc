@@ -1,0 +1,26 @@
+[MASTER]
+ignore=.git,__pycache__,.venv,venv,build,dist
+jobs=0
+
+[MESSAGES CONTROL]
+disable=
+    C0114,  # missing-module-docstring
+    C0115,  # missing-class-docstring
+    C0116,  # missing-function-docstring
+    R0903,  # too-few-public-methods
+    R0913,  # too-many-arguments
+    W0212,  # protected-access (for tests)
+
+[FORMAT]
+max-line-length=100
+good-names=i,j,k,ex,_,id
+
+[DESIGN]
+max-args=7
+max-attributes=10
+min-public-methods=1
+
+[SIMILARITIES]
+min-similarity-lines=6
+ignore-comments=yes
+ignore-docstrings=yes
