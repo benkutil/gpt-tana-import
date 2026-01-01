@@ -118,33 +118,7 @@ Conversation timestamps use your system's local timezone unless overridden with 
 
 ## Development
 
-### Running Quality Checks
-
-The project uses comprehensive quality tooling to ensure code quality:
-
-```bash
-# Run all checks at once
-make check
-# or
-./scripts/check-all.sh
-
-# Run tests
-make test
-
-# Auto-format code
-make format
-
-# Or run individual checks:
-black --check src tests    # Check code formatting
-isort --check-only src tests  # Check import sorting
-flake8 src tests          # Linting
-pylint src                # Advanced linting
-mypy src                  # Type checking
-bandit -r src -c .bandit  # Security scanning
-pytest                    # Run tests with coverage
-```
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed development guidelines and [AGENTS.md](AGENTS.md) for development workflows.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for complete development setup, quality checks, and contribution guidelines. See [AGENTS.md](AGENTS.md) for agent development workflows.
 
 ## Documentation
 
