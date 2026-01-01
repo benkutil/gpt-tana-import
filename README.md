@@ -1,5 +1,10 @@
 # ChatGPT to Tana Import Tool
 
+[![CI](https://github.com/benkutil/gpt-tana-import/actions/workflows/ci.yml/badge.svg)](https://github.com/benkutil/gpt-tana-import/actions/workflows/ci.yml)
+[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 A local CLI tool that imports ChatGPT conversation exports into Tana using the Tana Input API.
 
 ## Overview
@@ -38,7 +43,30 @@ Each conversation becomes a root node under your Inbox with:
 
 ## Installation
 
-_Coming soon - installation instructions will be added once implementation is complete_
+### For Development
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/benkutil/gpt-tana-import.git
+   cd gpt-tana-import
+   ```
+
+2. Create and activate a virtual environment:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+
+3. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   pip install -r requirements-dev.txt
+   pip install -e .
+   ```
+
+### For Production Use
+
+_Coming soon - PyPI package installation will be available once the core functionality is implemented_
 
 ## Configuration
 
@@ -107,7 +135,25 @@ Conversation timestamps use your system's local timezone unless overridden with 
 
 ## Development
 
-See [AGENTS.md](AGENTS.md) for development guidelines and workflows.
+### Running Quality Checks
+
+The project uses comprehensive quality tooling to ensure code quality:
+
+```bash
+# Run all checks at once
+./scripts/check-all.sh
+
+# Or run individual checks:
+black --check src tests    # Check code formatting
+isort --check-only src tests  # Check import sorting
+flake8 src tests          # Linting
+pylint src                # Advanced linting
+mypy src                  # Type checking
+bandit -r src -c .bandit  # Security scanning
+pytest                    # Run tests with coverage
+```
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed development guidelines and [AGENTS.md](AGENTS.md) for development workflows.
 
 ## Documentation
 
@@ -125,11 +171,11 @@ See [AGENTS.md](AGENTS.md) for development guidelines and workflows.
 - [ ] Conversation structure creation
 - [ ] Configuration validation
 
-### Phase 2: Quality & Testing
-- [ ] Unit test suite
-- [ ] Integration tests
-- [ ] Linting and code quality tools
-- [ ] CI/CD pipeline
+### Phase 2: Quality & Testing ✅
+- [x] Unit test suite (98% coverage)
+- [x] Integration tests
+- [x] Linting and code quality tools
+- [x] CI/CD pipeline
 
 ### Future Enhancements (Out of Scope)
 - Daily note placement by conversation date
