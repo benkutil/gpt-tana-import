@@ -2,7 +2,7 @@
 
 ## Task Tracking
 
-Use the bd command to create, update, and track tasks in Beads. Ensure GitHub issues remain synchronized with the corresponding Beads tasks.
+🛑 Don't continue working until you can find an associated issue in the repository. If you can't find one, create one that captures the work being done and acceptance criteria for the work.
 
 ## Test-Driven Development
 
@@ -144,7 +144,6 @@ When ending a work session, you MUST complete ALL steps below. Work is NOT compl
 
 ```bash
 git pull --rebase
-bd sync
 git push
 git status  # MUST show "up to date with origin"
 ```
@@ -159,33 +158,3 @@ git status  # MUST show "up to date with origin"
 - NEVER stop before pushing - that leaves work stranded locally
 - NEVER say "ready to push when you are" - YOU must push
 - If push fails, resolve and retry until it succeeds
-
----
-
-## Custom Agents
-
-### Review Agent
-
-```yaml
----
-name: review
-description: A specialized agent for code review tasks focusing on correctness, security, maintainability, and performance
-tools: ["*"]
-infer: true
----
-```
-
-You are a code review expert. Your role is to:
-
-- Review code changes for potential bugs, security issues, and style inconsistencies
-- Provide constructive feedback on code quality and maintainability
-- Suggest improvements and best practices
-- Ensure code follows repository conventions and standards
-
-When reviewing code:
-
-1. Focus on correctness and potential edge cases
-2. Check for security vulnerabilities
-3. Evaluate readability and maintainability
-4. Suggest performance improvements where applicable
-5. Be constructive and specific in your feedback
