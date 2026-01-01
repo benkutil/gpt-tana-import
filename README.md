@@ -45,24 +45,7 @@ Each conversation becomes a root node under your Inbox with:
 
 ### For Development
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/benkutil/gpt-tana-import.git
-   cd gpt-tana-import
-   ```
-
-2. Create and activate a virtual environment:
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
-
-3. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   pip install -r requirements-dev.txt
-   pip install -e .
-   ```
+See [CONTRIBUTING.md](CONTRIBUTING.md) for complete development setup instructions.
 
 ### For Production Use
 
@@ -141,7 +124,15 @@ The project uses comprehensive quality tooling to ensure code quality:
 
 ```bash
 # Run all checks at once
+make check
+# or
 ./scripts/check-all.sh
+
+# Run tests
+make test
+
+# Auto-format code
+make format
 
 # Or run individual checks:
 black --check src tests    # Check code formatting

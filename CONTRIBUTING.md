@@ -39,6 +39,37 @@ Thank you for your interest in contributing! This document provides guidelines a
 
 We use multiple tools to ensure code quality. You can run them individually or all at once.
 
+### Quick Start with Make
+
+```bash
+# See all available targets
+make help
+
+# Install development dependencies
+make install-dev
+
+# Run all quality checks
+make check
+
+# Run tests with coverage
+make test
+
+# Auto-format code
+make format
+
+# Run linters
+make lint
+
+# Run type checking
+make type-check
+
+# Run security scans
+make security
+
+# Clean generated files
+make clean
+```
+
 ### Individual Tools
 
 **Code Formatting:**

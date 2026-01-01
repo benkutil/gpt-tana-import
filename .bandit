@@ -5,5 +5,7 @@ exclude_dirs:
   - /.venv
   - /build
   - /dist
+  - /.github
+  - /docs
 skips:
   - B101

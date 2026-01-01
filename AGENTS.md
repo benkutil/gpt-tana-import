@@ -158,3 +158,9 @@ git status  # MUST show "up to date with origin"
 - NEVER stop before pushing - that leaves work stranded locally
 - NEVER say "ready to push when you are" - YOU must push
 - If push fails, resolve and retry until it succeeds
+
+---
+
+## Contributing
+
+For detailed development setup instructions, code style guidelines, testing procedures, and contribution workflow, see [CONTRIBUTING.md](CONTRIBUTING.md).
