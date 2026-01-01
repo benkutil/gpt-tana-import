@@ -80,19 +80,21 @@
 
 ## Decisions Made
 
-1. **Python 3.9+ as implementation language**
+All key architectural decisions have been captured in ADRs for long-term reference:
+
+1. **Python 3.9+ as implementation language** - See [ADR 0001](../adrs/0001-use-python-as-implementation-language.md)
    - Rationale: Better JSON parsing, simpler deployment, excellent CLI frameworks, strong datetime handling
    - Alternative considered: Node.js/TypeScript (viable but more complex build)
 
-2. **Comprehensive quality tooling upfront**
+2. **Comprehensive quality tooling upfront** - See [ADR 0002](../adrs/0002-comprehensive-quality-tooling-upfront.md)
    - Rationale: Prevents technical debt, ensures maintainability from day one
    - Phased approach allows incremental implementation alongside features
 
-3. **pytest + black + mypy stack**
+3. **pytest + black + mypy stack** - See [ADR 0003](../adrs/0003-pytest-black-mypy-stack.md)
    - Rationale: Industry standard, well-maintained, excellent ecosystem
    - Provides complete quality coverage: testing, formatting, type safety
 
-4. **80% coverage target**
+4. **80% coverage target** - See [ADR 0004](../adrs/0004-test-coverage-targets.md)
    - Rationale: Balanced between thorough testing and practical development speed
    - Critical modules (parser, converter) require 90%+
 
