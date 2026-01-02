@@ -1,5 +1,6 @@
 """CLI entry point for tana-import tool."""
 
+import json
 import sys
 from pathlib import Path
 from typing import List, Optional
@@ -86,8 +87,6 @@ def main(path: str, dry_run: bool = False, timezone: Optional[str] = None) -> No
     if dry_run:
         click.echo("\n=== DRY RUN MODE ===")
         click.echo("Events would be sent to Tana API:")
-        import json
-
         click.echo(json.dumps({"targetNodeId": config.inbox_node_id, "nodes": events}, indent=2))
     else:
         try:

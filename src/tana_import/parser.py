@@ -127,6 +127,6 @@ def _parse_message(message_data: Dict[str, Any]) -> Optional[ChatGPTMessage]:
 
     return ChatGPTMessage(
         role=role,
-        content=content if content else None,
+        content=content,
         create_time=create_time,
     )
