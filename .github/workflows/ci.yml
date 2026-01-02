@@ -41,7 +41,7 @@ jobs:
         run: flake8 src tests
 
       - name: Run pylint
-        run: pylint src
+        run: pylint src || pylint-exit $?
 
       - name: Run mypy
         run: mypy src

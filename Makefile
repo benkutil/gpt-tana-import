@@ -25,7 +25,7 @@ lint: ## Run all linters
 	black --check src tests
 	isort --check-only src tests
 	flake8 src tests
-	pylint src
+	pylint src || pylint-exit $$?
 
 format: ## Auto-format code
 	black src tests

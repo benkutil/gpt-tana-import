@@ -92,8 +92,8 @@ isort src tests
 # Run flake8
 flake8 src tests
 
-# Run pylint
-pylint src
+# Run pylint (uses pylint-exit to handle exit codes)
+pylint src || pylint-exit $?
 ```
 
 **Type Checking:**

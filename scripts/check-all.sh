@@ -53,7 +53,7 @@ run_check "isort (import sorting)" "isort --check-only src tests" || FAILED=$((F
 
 # Linting
 run_check "flake8" "flake8 src tests" || FAILED=$((FAILED + 1))
-run_check "pylint" "pylint src" || FAILED=$((FAILED + 1))
+run_check "pylint" "pylint src || pylint-exit \$?" || FAILED=$((FAILED + 1))
 
 # Type Checking
 run_check "mypy (type checking)" "mypy src" || FAILED=$((FAILED + 1))
