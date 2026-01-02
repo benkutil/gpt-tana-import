@@ -1,5 +1,10 @@
 # ChatGPT to Tana Import Tool
 
+[![CI](https://github.com/benkutil/gpt-tana-import/actions/workflows/ci.yml/badge.svg)](https://github.com/benkutil/gpt-tana-import/actions/workflows/ci.yml)
+[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 A local CLI tool that imports ChatGPT conversation exports into Tana using the Tana Input API.
 
 ## Overview
@@ -38,7 +43,13 @@ Each conversation becomes a root node under your Inbox with:
 
 ## Installation
 
-_Coming soon - installation instructions will be added once implementation is complete_
+### For Development
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for complete development setup instructions.
+
+### For Production Use
+
+_Coming soon - PyPI package installation will be available once the core functionality is implemented_
 
 ## Configuration
 
@@ -107,7 +118,7 @@ Conversation timestamps use your system's local timezone unless overridden with 
 
 ## Development
 
-See [AGENTS.md](AGENTS.md) for development guidelines and workflows.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for complete development setup, quality checks, and contribution guidelines. See [AGENTS.md](AGENTS.md) for agent development workflows.
 
 ## Documentation
 
@@ -125,11 +136,11 @@ See [AGENTS.md](AGENTS.md) for development guidelines and workflows.
 - [ ] Conversation structure creation
 - [ ] Configuration validation
 
-### Phase 2: Quality & Testing
-- [ ] Unit test suite
-- [ ] Integration tests
-- [ ] Linting and code quality tools
-- [ ] CI/CD pipeline
+### Phase 2: Quality & Testing ✅
+- [x] Unit test suite (98% coverage)
+- [x] Integration tests
+- [x] Linting and code quality tools
+- [x] CI/CD pipeline
 
 ### Future Enhancements (Out of Scope)
 - Daily note placement by conversation date
