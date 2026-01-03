@@ -15,6 +15,12 @@ def sample_chatgpt_export() -> Dict[str, Any]:
         "create_time": 1704153000.0,
         "update_time": 1704153600.0,
         "mapping": {
+            "root": {
+                "id": "root",
+                "message": None,
+                "parent": None,
+                "children": ["msg1"],
+            },
             "msg1": {
                 "id": "msg1",
                 "message": {
@@ -23,6 +29,8 @@ def sample_chatgpt_export() -> Dict[str, Any]:
                     "content": {"content_type": "text", "parts": ["Hello, world!"]},
                     "create_time": 1704153000.0,
                 },
+                "parent": "root",
+                "children": ["msg2"],
             },
             "msg2": {
                 "id": "msg2",
@@ -32,6 +40,8 @@ def sample_chatgpt_export() -> Dict[str, Any]:
                     "content": {"content_type": "text", "parts": ["Hi! How can I help you?"]},
                     "create_time": 1704153030.0,
                 },
+                "parent": "msg1",
+                "children": [],
             },
         },
     }
