@@ -12,14 +12,14 @@ def test_conversation_to_tana_node() -> None:
     ]
     conversation = ChatGPTConversation(title="Test", create_time=1704153000.0, messages=messages)
     node = conversation_to_tana_node(conversation)
-    assert "ChatGPT conversation" in node.text
-    assert "#ai-chat" in (node.tags or [])
+    assert "ChatGPT conversation" in node.name
+    assert node.supertag == "ai-chat"
     assert node.children is not None
     assert len(node.children) == 1  # One prompt node
-    assert node.children[0].text == "Hello"
+    assert node.children[0].name == "Hello"
     assert node.children[0].children is not None
     assert len(node.children[0].children) == 1  # One response node
-    assert node.children[0].children[0].text == "Hi there!"
+    assert node.children[0].children[0].name == "Hi there!"
 
 
 def test_create_tana_events() -> None:
@@ -31,6 +31,6 @@ def test_create_tana_events() -> None:
     events = create_tana_events(conversations, "inbox_123")
     assert isinstance(events, list)
     assert len(events) == 2
-    assert events[0]["type"] == "addNode"
-    assert events[0]["nodeId"] == "inbox_123"
-    assert "node" in events[0]
+    assert events[0]["target"] == "inbox_123"
+    assert events[0]["supertag"] == "ai-chat"
+    assert "name" in events[0]
