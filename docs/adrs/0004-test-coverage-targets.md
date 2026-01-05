@@ -1,6 +1,6 @@
 # ADR 0004: Test Coverage Targets
 
-**Date:** 2026-01-01  
+**Date:** 2026-01-01
 **Status:** Accepted
 
 ## Context
@@ -29,7 +29,7 @@ This is a **balanced target** that:
 - Is achievable without excessive effort
 - Is considered industry best practice for production code
 
-**Why not higher?** 
+**Why not higher?**
 - 100% coverage can lead to diminishing returns (testing trivial code)
 - Some code (like configuration loading, CLI argument parsing) provides less value when tested extensively
 - Allows focus on meaningful tests rather than coverage numbers

@@ -19,8 +19,27 @@ Integrate to the main branch frequently via small, self-contained commits that e
 Agents must commit atomically as they work. After completing each logical unit of work:
 
 - Stage the relevant changes
+- **Run pre-commit hooks** before committing: `pre-commit run --all-files` (or let git hooks run automatically)
 - Commit with a conventional commit message
 - Continue to the next task
+
+## Pre-Commit Hooks
+
+This repository uses pre-commit hooks to enforce code quality. Before committing any code changes:
+
+1. **Ensure pre-commit is installed**: `pip install pre-commit && pre-commit install`
+2. **Run hooks manually before committing**: `pre-commit run --all-files`
+3. **Fix any issues** before staging and committing
+
+The hooks automatically run:
+- **black** - Code formatting
+- **isort** - Import sorting
+- **flake8** - Linting
+- **trailing-whitespace** - Remove trailing whitespace
+- **end-of-file-fixer** - Ensure files end with newline
+- **check-yaml/check-json** - Validate YAML/JSON syntax
+
+⚠️ **Never skip pre-commit hooks** with `--no-verify`. If hooks fail, fix the issues before committing.
 
 Do not batch multiple unrelated changes into a single commit. Each commit should be independently reviewable and revertable.
 

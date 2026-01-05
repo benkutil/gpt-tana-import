@@ -65,7 +65,7 @@ export TANA_INBOX_NODE_ID="your-inbox-node-id"
 
 1. **TANA_API_ENDPOINT**: Use the endpoint shown above (current as of 2026)
 2. **TANA_API_TOKEN**: Generate from Tana Settings → API tokens
-3. **TANA_INBOX_NODE_ID**: 
+3. **TANA_INBOX_NODE_ID**:
    - Navigate to your Inbox in Tana
    - Copy the node ID from the URL or node context menu
 
@@ -73,19 +73,50 @@ export TANA_INBOX_NODE_ID="your-inbox-node-id"
 
 ## Usage
 
-_Coming soon - usage examples will be added once implementation is complete_
+### Prerequisites
+
+1. **Install the package** (for development):
+   ```bash
+   pip install -e .
+   ```
+
+2. **Set up environment variables** - Create a `.env` file or export these variables:
+   ```bash
+   export TANA_API_ENDPOINT="https://europe-west1-tagr-prod.cloudfunctions.net/addToNodeV2"
+   export TANA_API_TOKEN="your-tana-api-token"
+   export TANA_INBOX_NODE_ID="your-inbox-node-id"
+   ```
+
+   See `.env.example` for a template.
 
 ### Basic Examples
 
 ```bash
 # Import a single ChatGPT export file
-./import-chatgpt path/to/conversations.json
+tana-import path/to/conversations.json
 
 # Import all JSON files in a directory
-./import-chatgpt path/to/exports/
+tana-import path/to/exports/
 
 # Dry run - generate events without sending to Tana
-./import-chatgpt --dry-run conversations.json
+tana-import --dry-run conversations.json
+
+# Test with the example file
+tana-import --dry-run examples/example_chatgpt_export.json
+```
+
+### Example Output
+
+```
+Found 1 JSON file(s) to process
+✓ Parsed 1 conversation(s) from example_chatgpt_export.json
+Generated 1 event(s) for 1 conversation(s)
+✓ Successfully sent events to Tana (status: 200)
+
+=== Summary ===
+Files scanned: 1
+Conversations found: 1
+Events generated: 1
 ```
 
 ## Node Structure
@@ -129,15 +160,15 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for complete development setup, quality c
 
 ## Roadmap
 
-### Phase 1: Core Functionality (Current)
-- [ ] Basic CLI implementation
-- [ ] ChatGPT export JSON parsing
-- [ ] Tana Input API integration (events format)
-- [ ] Conversation structure creation
-- [ ] Configuration validation
+### Phase 1: Core Functionality ✅
+- [x] Basic CLI implementation
+- [x] ChatGPT export JSON parsing
+- [x] Tana Input API integration (events format)
+- [x] Conversation structure creation
+- [x] Configuration validation
 
 ### Phase 2: Quality & Testing ✅
-- [x] Unit test suite (98% coverage)
+- [x] Unit test suite (89% coverage)
 - [x] Integration tests
 - [x] Linting and code quality tools
 - [x] CI/CD pipeline

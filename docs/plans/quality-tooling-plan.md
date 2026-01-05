@@ -1,7 +1,7 @@
 # Quality Tooling Implementation Plan
 
-**Created:** 2026-01-01  
-**Status:** Planned  
+**Created:** 2026-01-01
+**Status:** Planned
 **Purpose:** Establish testing infrastructure, linting, and code quality tools for the ChatGPT to Tana import project
 
 ---
@@ -262,7 +262,7 @@ jobs:
     strategy:
       matrix:
         python-version: ['3.9', '3.10', '3.11', '3.12']
-    
+
     steps:
       - uses: actions/checkout@v3
       - name: Set up Python
