@@ -9,38 +9,70 @@ import pytest
 
 @pytest.fixture
 def sample_chatgpt_export() -> Dict[str, Any]:
-    """Sample ChatGPT export data."""
+    """Sample ChatGPT export data matching real export format."""
     return {
         "title": "Test Conversation",
         "create_time": 1704153000.0,
         "update_time": 1704153600.0,
         "mapping": {
-            "root": {
-                "id": "root",
+            "client-created-root": {
+                "id": "client-created-root",
                 "message": None,
                 "parent": None,
-                "children": ["msg1"],
+                "children": ["aaaaaa01-0000-0000-0000-000000000001"],
             },
-            "msg1": {
-                "id": "msg1",
+            "aaaaaa01-0000-0000-0000-000000000001": {
+                "id": "aaaaaa01-0000-0000-0000-000000000001",
                 "message": {
-                    "id": "msg1",
-                    "author": {"role": "user"},
-                    "content": {"content_type": "text", "parts": ["Hello, world!"]},
+                    "id": "aaaaaa01-0000-0000-0000-000000000001",
+                    "author": {"role": "system", "name": None, "metadata": {}},
+                    "create_time": None,
+                    "update_time": None,
+                    "content": {"content_type": "text", "parts": [""]},
+                    "status": "finished_successfully",
+                    "end_turn": True,
+                    "weight": 0.0,
+                    "metadata": {"is_visually_hidden_from_conversation": True},
+                    "recipient": "all",
+                    "channel": None,
+                },
+                "parent": "client-created-root",
+                "children": ["aaaaaa01-0000-0000-0000-000000000002"],
+            },
+            "aaaaaa01-0000-0000-0000-000000000002": {
+                "id": "aaaaaa01-0000-0000-0000-000000000002",
+                "message": {
+                    "id": "aaaaaa01-0000-0000-0000-000000000002",
+                    "author": {"role": "user", "name": None, "metadata": {}},
                     "create_time": 1704153000.0,
+                    "update_time": None,
+                    "content": {"content_type": "text", "parts": ["Hello, world!"]},
+                    "status": "finished_successfully",
+                    "end_turn": None,
+                    "weight": 1.0,
+                    "metadata": {},
+                    "recipient": "all",
+                    "channel": None,
                 },
-                "parent": "root",
-                "children": ["msg2"],
+                "parent": "aaaaaa01-0000-0000-0000-000000000001",
+                "children": ["aaaaaa01-0000-0000-0000-000000000003"],
             },
-            "msg2": {
-                "id": "msg2",
+            "aaaaaa01-0000-0000-0000-000000000003": {
+                "id": "aaaaaa01-0000-0000-0000-000000000003",
                 "message": {
-                    "id": "msg2",
-                    "author": {"role": "assistant"},
-                    "content": {"content_type": "text", "parts": ["Hi! How can I help you?"]},
+                    "id": "aaaaaa01-0000-0000-0000-000000000003",
+                    "author": {"role": "assistant", "name": None, "metadata": {}},
                     "create_time": 1704153030.0,
+                    "update_time": None,
+                    "content": {"content_type": "text", "parts": ["Hi! How can I help you?"]},
+                    "status": "finished_successfully",
+                    "end_turn": True,
+                    "weight": 1.0,
+                    "metadata": {"finish_details": {"type": "stop"}},
+                    "recipient": "all",
+                    "channel": None,
                 },
-                "parent": "msg1",
+                "parent": "aaaaaa01-0000-0000-0000-000000000002",
                 "children": [],
             },
         },

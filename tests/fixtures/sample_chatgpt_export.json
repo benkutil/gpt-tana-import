@@ -4,42 +4,370 @@
     "create_time": 1704153000.0,
     "update_time": 1704153600.0,
     "mapping": {
-      "root": {
-        "id": "root",
+      "client-created-root": {
+        "id": "client-created-root",
         "message": null,
         "parent": null,
-        "children": ["msg1"]
+        "children": ["aaaaaa01-0000-0000-0000-000000000001"]
       },
-      "msg1": {
-        "id": "msg1",
+      "aaaaaa01-0000-0000-0000-000000000001": {
+        "id": "aaaaaa01-0000-0000-0000-000000000001",
         "message": {
-          "id": "msg1",
+          "id": "aaaaaa01-0000-0000-0000-000000000001",
           "author": {
-            "role": "user"
+            "role": "system",
+            "name": null,
+            "metadata": {}
           },
+          "create_time": null,
+          "update_time": null,
+          "content": {
+            "content_type": "text",
+            "parts": [""]
+          },
+          "status": "finished_successfully",
+          "end_turn": true,
+          "weight": 0.0,
+          "metadata": {
+            "is_visually_hidden_from_conversation": true
+          },
+          "recipient": "all",
+          "channel": null
+        },
+        "parent": "client-created-root",
+        "children": ["aaaaaa01-0000-0000-0000-000000000002"]
+      },
+      "aaaaaa01-0000-0000-0000-000000000002": {
+        "id": "aaaaaa01-0000-0000-0000-000000000002",
+        "message": {
+          "id": "aaaaaa01-0000-0000-0000-000000000002",
+          "author": {
+            "role": "user",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1704153000.0,
+          "update_time": null,
           "content": {
             "content_type": "text",
             "parts": ["What is the meaning of life?"]
           },
-          "create_time": 1704153000.0
+          "status": "finished_successfully",
+          "end_turn": null,
+          "weight": 1.0,
+          "metadata": {},
+          "recipient": "all",
+          "channel": null
         },
-        "parent": "root",
-        "children": ["msg2"]
+        "parent": "aaaaaa01-0000-0000-0000-000000000001",
+        "children": ["aaaaaa01-0000-0000-0000-000000000003"]
       },
-      "msg2": {
-        "id": "msg2",
+      "aaaaaa01-0000-0000-0000-000000000003": {
+        "id": "aaaaaa01-0000-0000-0000-000000000003",
         "message": {
-          "id": "msg2",
+          "id": "aaaaaa01-0000-0000-0000-000000000003",
           "author": {
-            "role": "assistant"
+            "role": "assistant",
+            "name": null,
+            "metadata": {}
           },
+          "create_time": 1704153030.0,
+          "update_time": null,
           "content": {
             "content_type": "text",
             "parts": ["The meaning of life is a philosophical question that has been pondered throughout human history. Different cultures and philosophies offer various perspectives..."]
           },
-          "create_time": 1704153030.0
+          "status": "finished_successfully",
+          "end_turn": true,
+          "weight": 1.0,
+          "metadata": {
+            "finish_details": {
+              "type": "stop",
+              "stop_tokens": [200002]
+            },
+            "is_complete": true
+          },
+          "recipient": "all",
+          "channel": null
         },
-        "parent": "msg1",
+        "parent": "aaaaaa01-0000-0000-0000-000000000002",
+        "children": []
+      }
+    }
+  },
+  {
+    "title": "Multi-turn Code Discussion",
+    "create_time": 1704240000.0,
+    "update_time": 1704241200.0,
+    "mapping": {
+      "client-created-root": {
+        "id": "client-created-root",
+        "message": null,
+        "parent": null,
+        "children": ["bbbbbb01-0000-0000-0000-000000000001"]
+      },
+      "bbbbbb01-0000-0000-0000-000000000001": {
+        "id": "bbbbbb01-0000-0000-0000-000000000001",
+        "message": {
+          "id": "bbbbbb01-0000-0000-0000-000000000001",
+          "author": {
+            "role": "system",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": null,
+          "update_time": null,
+          "content": {
+            "content_type": "text",
+            "parts": [""]
+          },
+          "status": "finished_successfully",
+          "end_turn": true,
+          "weight": 0.0,
+          "metadata": {
+            "is_visually_hidden_from_conversation": true
+          },
+          "recipient": "all",
+          "channel": null
+        },
+        "parent": "client-created-root",
+        "children": ["bbbbbb01-0000-0000-0000-000000000002"]
+      },
+      "bbbbbb01-0000-0000-0000-000000000002": {
+        "id": "bbbbbb01-0000-0000-0000-000000000002",
+        "message": {
+          "id": "bbbbbb01-0000-0000-0000-000000000002",
+          "author": {
+            "role": "user",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1704240000.0,
+          "update_time": null,
+          "content": {
+            "content_type": "text",
+            "parts": ["How do I write a Python function to reverse a string?"]
+          },
+          "status": "finished_successfully",
+          "end_turn": null,
+          "weight": 1.0,
+          "metadata": {},
+          "recipient": "all",
+          "channel": null
+        },
+        "parent": "bbbbbb01-0000-0000-0000-000000000001",
+        "children": ["bbbbbb01-0000-0000-0000-000000000003"]
+      },
+      "bbbbbb01-0000-0000-0000-000000000003": {
+        "id": "bbbbbb01-0000-0000-0000-000000000003",
+        "message": {
+          "id": "bbbbbb01-0000-0000-0000-000000000003",
+          "author": {
+            "role": "assistant",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1704240030.0,
+          "update_time": null,
+          "content": {
+            "content_type": "text",
+            "parts": ["Here's a simple Python function to reverse a string:\n\n```python\ndef reverse_string(s):\n    return s[::-1]\n```\n\nThis uses Python's slice notation with a step of -1 to reverse the string."]
+          },
+          "status": "finished_successfully",
+          "end_turn": true,
+          "weight": 1.0,
+          "metadata": {
+            "finish_details": {
+              "type": "stop",
+              "stop_tokens": [200002]
+            },
+            "is_complete": true
+          },
+          "recipient": "all",
+          "channel": null
+        },
+        "parent": "bbbbbb01-0000-0000-0000-000000000002",
+        "children": ["bbbbbb01-0000-0000-0000-000000000004"]
+      },
+      "bbbbbb01-0000-0000-0000-000000000004": {
+        "id": "bbbbbb01-0000-0000-0000-000000000004",
+        "message": {
+          "id": "bbbbbb01-0000-0000-0000-000000000004",
+          "author": {
+            "role": "user",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1704240060.0,
+          "update_time": null,
+          "content": {
+            "content_type": "text",
+            "parts": ["Can you show me another way without slicing?"]
+          },
+          "status": "finished_successfully",
+          "end_turn": null,
+          "weight": 1.0,
+          "metadata": {},
+          "recipient": "all",
+          "channel": null
+        },
+        "parent": "bbbbbb01-0000-0000-0000-000000000003",
+        "children": ["bbbbbb01-0000-0000-0000-000000000005"]
+      },
+      "bbbbbb01-0000-0000-0000-000000000005": {
+        "id": "bbbbbb01-0000-0000-0000-000000000005",
+        "message": {
+          "id": "bbbbbb01-0000-0000-0000-000000000005",
+          "author": {
+            "role": "assistant",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1704240090.0,
+          "update_time": null,
+          "content": {
+            "content_type": "text",
+            "parts": ["Sure! Here are two alternative approaches:\n\n**Using reversed() and join():**\n```python\ndef reverse_string(s):\n    return ''.join(reversed(s))\n```\n\n**Using a loop:**\n```python\ndef reverse_string(s):\n    result = ''\n    for char in s:\n        result = char + result\n    return result\n```"]
+          },
+          "status": "finished_successfully",
+          "end_turn": true,
+          "weight": 1.0,
+          "metadata": {
+            "finish_details": {
+              "type": "stop",
+              "stop_tokens": [200002]
+            },
+            "is_complete": true
+          },
+          "recipient": "all",
+          "channel": null
+        },
+        "parent": "bbbbbb01-0000-0000-0000-000000000004",
+        "children": []
+      }
+    }
+  },
+  {
+    "title": "Tool Usage Example",
+    "create_time": 1704326400.0,
+    "update_time": 1704327000.0,
+    "mapping": {
+      "client-created-root": {
+        "id": "client-created-root",
+        "message": null,
+        "parent": null,
+        "children": ["cccccc01-0000-0000-0000-000000000001"]
+      },
+      "cccccc01-0000-0000-0000-000000000001": {
+        "id": "cccccc01-0000-0000-0000-000000000001",
+        "message": {
+          "id": "cccccc01-0000-0000-0000-000000000001",
+          "author": {
+            "role": "system",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": null,
+          "update_time": null,
+          "content": {
+            "content_type": "text",
+            "parts": [""]
+          },
+          "status": "finished_successfully",
+          "end_turn": true,
+          "weight": 0.0,
+          "metadata": {
+            "is_visually_hidden_from_conversation": true
+          },
+          "recipient": "all",
+          "channel": null
+        },
+        "parent": "client-created-root",
+        "children": ["cccccc01-0000-0000-0000-000000000002"]
+      },
+      "cccccc01-0000-0000-0000-000000000002": {
+        "id": "cccccc01-0000-0000-0000-000000000002",
+        "message": {
+          "id": "cccccc01-0000-0000-0000-000000000002",
+          "author": {
+            "role": "user",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1704326400.0,
+          "update_time": null,
+          "content": {
+            "content_type": "text",
+            "parts": ["Summarize this document for me"]
+          },
+          "status": "finished_successfully",
+          "end_turn": null,
+          "weight": 1.0,
+          "metadata": {},
+          "recipient": "all",
+          "channel": null
+        },
+        "parent": "cccccc01-0000-0000-0000-000000000001",
+        "children": ["cccccc01-0000-0000-0000-000000000003"]
+      },
+      "cccccc01-0000-0000-0000-000000000003": {
+        "id": "cccccc01-0000-0000-0000-000000000003",
+        "message": {
+          "id": "cccccc01-0000-0000-0000-000000000003",
+          "author": {
+            "role": "tool",
+            "name": "file_reader",
+            "metadata": {}
+          },
+          "create_time": 1704326430.0,
+          "update_time": null,
+          "content": {
+            "content_type": "text",
+            "parts": ["Document content: This is a sample document about software testing best practices..."]
+          },
+          "status": "finished_successfully",
+          "end_turn": false,
+          "weight": 1.0,
+          "metadata": {
+            "invoked_plugin": {
+              "type": "file_reader"
+            }
+          },
+          "recipient": "all",
+          "channel": null
+        },
+        "parent": "cccccc01-0000-0000-0000-000000000002",
+        "children": ["cccccc01-0000-0000-0000-000000000004"]
+      },
+      "cccccc01-0000-0000-0000-000000000004": {
+        "id": "cccccc01-0000-0000-0000-000000000004",
+        "message": {
+          "id": "cccccc01-0000-0000-0000-000000000004",
+          "author": {
+            "role": "assistant",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1704326460.0,
+          "update_time": null,
+          "content": {
+            "content_type": "text",
+            "parts": ["Here's a summary of the document:\n\nThe document covers software testing best practices, including unit testing, integration testing, and end-to-end testing strategies."]
+          },
+          "status": "finished_successfully",
+          "end_turn": true,
+          "weight": 1.0,
+          "metadata": {
+            "finish_details": {
+              "type": "stop",
+              "stop_tokens": [200002]
+            },
+            "is_complete": true
+          },
+          "recipient": "all",
+          "channel": null
+        },
+        "parent": "cccccc01-0000-0000-0000-000000000003",
         "children": []
       }
     }
