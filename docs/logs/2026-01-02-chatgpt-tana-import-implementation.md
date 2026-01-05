@@ -1,7 +1,7 @@
 # Session Log - 2026-01-02: ChatGPT to Tana Import Implementation
 
-**Date:** 2026-01-02  
-**Objective:** Implement complete CLI tool for importing ChatGPT conversation exports into Tana  
+**Date:** 2026-01-02
+**Objective:** Implement complete CLI tool for importing ChatGPT conversation exports into Tana
 **Related:** [Issue #1](https://github.com/benkutil/gpt-tana-import/issues/1), PR #2
 
 ## Work Completed

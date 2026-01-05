@@ -1,6 +1,6 @@
 # ADR 0003: Use pytest + black + mypy Stack for Quality Tooling
 
-**Date:** 2026-01-01  
+**Date:** 2026-01-01
 **Status:** Accepted
 
 ## Context

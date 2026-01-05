@@ -65,7 +65,7 @@ export TANA_INBOX_NODE_ID="your-inbox-node-id"
 
 1. **TANA_API_ENDPOINT**: Use the endpoint shown above (current as of 2026)
 2. **TANA_API_TOKEN**: Generate from Tana Settings → API tokens
-3. **TANA_INBOX_NODE_ID**: 
+3. **TANA_INBOX_NODE_ID**:
    - Navigate to your Inbox in Tana
    - Copy the node ID from the URL or node context menu
 

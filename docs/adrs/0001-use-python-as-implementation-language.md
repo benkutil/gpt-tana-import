@@ -1,6 +1,6 @@
 # ADR 0001: Use Python as Implementation Language
 
-**Date:** 2026-01-01  
+**Date:** 2026-01-01
 **Status:** Accepted
 
 ## Context

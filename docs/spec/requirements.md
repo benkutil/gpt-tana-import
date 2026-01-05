@@ -2,7 +2,7 @@
 
 **Title:** Import ChatGPT exports into Tana via Input API (events) → Inbox
 
-**Summary**  
+**Summary**
 Build a local CLI tool that reads ChatGPT export JSON and imports conversations into Tana using the Tana Input API (**events-style payload**). Imported conversations should be created under a configured **Inbox nodeId**, tagged `#ai-chat`, and structured into prompt/response trees with preserved ordering.
 
 ---
@@ -58,8 +58,8 @@ Must fail fast (exit non-zero, do not send anything) unless these are configured
 ### 4) Conversation node
 For each ChatGPT conversation:
 
-- Create a conversation root node under Inbox with title:  
-  `ChatGPT conversation - YYYY-MM-DD HH:MM`  
+- Create a conversation root node under Inbox with title:
+  `ChatGPT conversation - YYYY-MM-DD HH:MM`
   derived from conversation `create_time` (timezone handling: use system local time unless a CLI `--timezone` override is implemented).
 - Apply supertag: `#ai-chat`.
 
