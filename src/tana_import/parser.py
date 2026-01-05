@@ -74,7 +74,20 @@ def _linearize_messages(mapping: Dict[str, Any]) -> List[ChatGPTMessage]:
     messages: List[ChatGPTMessage] = []
 
     # Start from the root node and traverse the tree
-    current_id: Optional[str] = "root"
+    # ChatGPT exports may use "root" or "client-created-root" as the root node ID
+    current_id: Optional[str] = None
+    for candidate in ["client-created-root", "root"]:
+        if candidate in mapping:
+            current_id = candidate
+            break
+
+    # If no known root found, find the node with no parent
+    if current_id is None:
+        for node_id, node in mapping.items():
+            if node.get("parent") is None:
+                current_id = node_id
+                break
+
     visited = set()
 
     while current_id and current_id not in visited:
